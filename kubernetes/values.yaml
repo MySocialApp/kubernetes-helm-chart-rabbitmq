@@ -1,0 +1,5 @@
+rabbitmqReplicas: 1
+
+rabbitmqImageVersion: "3.6.11-r7"
+
+rabbitmqUsername: "User"
