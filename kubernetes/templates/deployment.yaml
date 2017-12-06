@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: {{ template "kubernetes.fullname" . }}
+  name: {{ template "kubernetes.name" . }}
   namespace: {{ .Release.Namespace }}
   labels:
     app: {{ template "kubernetes.name" . }}
