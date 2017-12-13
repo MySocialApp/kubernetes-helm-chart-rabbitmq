@@ -16,7 +16,7 @@ spec:
         app: rabbitmq
     spec:
       nodeSelector:
-        type: worker
+        type: {{ .Values.rabbimqNodeSelector }}
       containers:
       - name: rabbitmq
         image: bitnami/rabbitmq:{{ .Values.rabbitmqImageVersion }}

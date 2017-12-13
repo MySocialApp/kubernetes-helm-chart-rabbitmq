@@ -1,5 +1,5 @@
 rabbitmqReplicas: 1
-
+abbimqNodeSelector: worker
 rabbitmqImageVersion: "3.6.11-r7"
 
 rabbitmqUsername: "user"
