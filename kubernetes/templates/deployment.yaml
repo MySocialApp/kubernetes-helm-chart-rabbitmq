@@ -16,7 +16,9 @@ spec:
         app: rabbitmq
     spec:
       nodeSelector:
-        type: {{ .Values.rabbimqNodeSelector }}
+        {{- range $key, $val := .Values.rabbitmqNodeSelector }}
+        {{ $key }}: {{ $val | quote }}
+        {{- end}}
       containers:
       - name: rabbitmq
         image: bitnami/rabbitmq:{{ .Values.rabbitmqImageVersion }}
@@ -51,7 +53,7 @@ spec:
         - name: ampq
           containerPort: 5672
         - name: dist
-          containerPort: 5672
+          containerPort: 25672
         - name: stats
           containerPort: 15672
         livenessProbe:

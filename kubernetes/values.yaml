@@ -1,5 +1,6 @@
 rabbitmqReplicas: 1
-abbimqNodeSelector: worker
+abbimqNodeSelector:
+  node-role.kubernetes.io/node: "true"
 rabbitmqImageVersion: "3.6.11-r7"
 
 rabbitmqUsername: "user"
