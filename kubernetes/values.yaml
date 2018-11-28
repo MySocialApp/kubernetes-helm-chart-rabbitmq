@@ -1,6 +1,13 @@
 rabbitmqReplicas: 1
 abbimqNodeSelector:
   node-role.kubernetes.io/node: "true"
+  stateless: "true"
 rabbitmqImageVersion: "3.6.11-r7"
 
 rabbitmqUsername: "user"
+
+rabbitmqResources:
+  limits:
+    memory: 1Gi
+  requests:
+    memory: 1Gi

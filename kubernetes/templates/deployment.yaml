@@ -47,6 +47,8 @@ spec:
           value: "/"
         - name: RABBITMQ_MANAGER_PORT
           value: "15672"
+        resources:
+{{ toYaml .Values.rabbitmqResources | indent 12 }}
         ports:
         - name: epmd
           containerPort: 4369
