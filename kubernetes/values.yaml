@@ -1,5 +1,5 @@
 rabbitmqReplicas: 1
-rabbimqNodeSelector:
+rabbitmqNodeSelector:
   node-role.kubernetes.io/node: "true"
   stateless: "true"
 rabbitmqImageVersion: "3.6.11-r7"
